@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.creppyfm.inventorymanagementapp.controller.ModifyPartController">
+    <children>
+        <VBox alignment="CENTER" layoutX="208.0" layoutY="151.0" prefHeight="403.0" prefWidth="193.0" spacing="20.0">
+            <children>
+                <TextField fx:id="modPartIDTxt" alignment="CENTER" disable="true" editable="false" maxWidth="-Infinity" prefHeight="35.0" prefWidth="175.0" promptText="Auto Gen">
+                    <font>
+                        <Font name="System Italic" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="modPartNameTxt" maxWidth="-Infinity" prefHeight="35.0" prefWidth="175.0" />
+                <TextField fx:id="modPartInventoryTxt" maxWidth="-Infinity" prefHeight="35.0" prefWidth="175.0" />
+                <TextField fx:id="modPartPriceCostTxt" maxWidth="-Infinity" prefHeight="35.0" prefWidth="175.0" />
+                <TextField fx:id="modPartMaxTxt" maxWidth="-Infinity" prefHeight="35.0" prefWidth="175.0" />
+                <TextField fx:id="modPartMachineIDOrCompanyNameTxt" maxWidth="-Infinity" prefHeight="35.0" prefWidth="175.0" />
+            </children>
+        </VBox>
+        <Label layoutX="116.0" layoutY="190.0" prefHeight="47.0" prefWidth="117.0" text="ID">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="116.0" layoutY="244.0" prefHeight="47.0" prefWidth="117.0" text="Name">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="116.0" layoutY="298.0" prefHeight="47.0" prefWidth="117.0" text="Inventory">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="116.0" layoutY="353.0" prefHeight="47.0" prefWidth="117.0" text="Price/Cost">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="116.0" layoutY="410.0" prefHeight="47.0" prefWidth="117.0" text="Max">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="inHouseOrOutsourced" layoutX="116.0" layoutY="468.0" prefHeight="47.0" prefWidth="117.0" text="Machine ID">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="modPartMinTxt" layoutX="505.0" layoutY="416.0" maxWidth="-Infinity" prefHeight="35.0" prefWidth="175.0" />
+        <Label layoutX="446.0" layoutY="410.0" prefHeight="47.0" prefWidth="57.0" text="Min">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="57.0" layoutY="76.0" prefHeight="67.0" prefWidth="175.0" text="Modify Part">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="modPartInHouseRBtn" layoutX="288.0" layoutY="101.0" mnemonicParsing="false" onAction="#modifyPartInHouseSelected" prefHeight="47.0" prefWidth="135.0" selected="true" text="In-House">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="InHouseOrOutsourcedTG" />
+         </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="modPartOutsourcedRBtn" layoutX="437.0" layoutY="101.0" mnemonicParsing="false" onAction="#modifyPartOutsourcedSelected" prefHeight="47.0" prefWidth="135.0" text="Outsourced" toggleGroup="$InHouseOrOutsourcedTG">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </RadioButton>
+        <Button layoutX="372.0" layoutY="596.0" mnemonicParsing="false" onAction="#onActionSavePart" prefHeight="32.0" prefWidth="67.0" text="Save">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="471.0" layoutY="596.0" mnemonicParsing="false" onAction="#onActionCancelPart" prefHeight="32.0" prefWidth="77.0" text="Cancel">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

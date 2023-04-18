@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.creppyfm.inventorymanagementapp","l":"com.creppyfm.inventorymanagementapp"},{"m":"com.creppyfm.inventorymanagementapp","l":"com.creppyfm.inventorymanagementapp.controller"},{"m":"com.creppyfm.inventorymanagementapp","l":"com.creppyfm.inventorymanagementapp.model"}];updateSearchResults();
